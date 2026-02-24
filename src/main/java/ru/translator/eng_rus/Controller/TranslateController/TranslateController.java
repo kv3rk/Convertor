@@ -19,7 +19,7 @@ public class TranslateController {
         this.translateService = translateService;
     }
 
-    @GetMapping("/${str}")
+    @GetMapping("/{str}")
     public String get(@PathVariable String str) {
         log.info("Got value {}", str);
         String fullStr = translateService.get(str);

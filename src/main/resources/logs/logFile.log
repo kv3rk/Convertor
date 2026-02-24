@@ -1,77 +1,15 @@
-[16:32 24-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 50599 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
-[16:32 24-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
-[16:32 24-02] [main] [WARN ] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
-[16:32 24-02] [main] [ERROR] [o.s.b.d.LoggingFailureAnalysisReporter] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Failed to configure a dDataSource: 'url' attribute is not specified and no embedded datasource could be configured.
-
-Reason: Failed to determine a suitable driver class
-
-
-Action:
-
-Consider the following:
-	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
-	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
-
-[16:34 24-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 51315 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
-[16:34 24-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
-[16:34 24-02] [main] [INFO ] [r.t.e.C.DictionaryForMap] Initialized dictionary
-[16:34 24-02] [main] [WARN ] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invalid mapping on handler class [ru.translator.eng_rus.Controller.TranslateController.TranslateController]: public java.lang.String ru.translator.eng_rus.Controller.TranslateController.TranslateController.get(java.lang.String)
-[16:34 24-02] [main] [ERROR] [o.s.b.SpringApplication] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invalid mapping on handler class [ru.translator.eng_rus.Controller.TranslateController.TranslateController]: public java.lang.String ru.translator.eng_rus.Controller.TranslateController.TranslateController.get(java.lang.String)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at ru.translator.eng_rus.EngRusApplication.main(EngRusApplication.java:11)
-Caused by: java.lang.IllegalStateException: Invalid mapping on handler class [ru.translator.eng_rus.Controller.TranslateController.TranslateController]: public java.lang.String ru.translator.eng_rus.Controller.TranslateController.TranslateController.get(java.lang.String)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:287)
-	at org.springframework.core.MethodIntrospector.lambda$selectMethods$0(MethodIntrospector.java:75)
-	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:366)
-	at org.springframework.core.MethodIntrospector.selectMethods(MethodIntrospector.java:73)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:280)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:237)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
-	... 18 common frames omitted
-Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'str' in value "/${str}"
-	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
-	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:298)
-	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:131)
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:293)
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:264)
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:186)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:970)
-	at org.springframework.beans.factory.config.EmbeddedValueResolver.resolveStringValue(EmbeddedValueResolver.java:54)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.resolveEmbeddedValuesInPatterns(RequestMappingHandlerMapping.java:471)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:421)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.createRequestMappingInfo(RequestMappingHandlerMapping.java:361)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:315)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.getMappingForMethod(RequestMappingHandlerMapping.java:84)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$1(AbstractHandlerMethodMapping.java:283)
-	... 28 common frames omitted
+[16:42 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.T.TranslateController] Got value gtybc
+[16:42 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.S.T.TranslateService] Got value gtybc for work
+[16:42 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter g to п
+[16:42 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter t to е
+[16:42 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter y to н
+[16:42 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter b to и
+[16:42 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
+[16:42 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.u.TranslateWord] Translated full word gtybc to пенис
+[16:42 24-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.T.TranslateController] Got value dfcz
+[16:42 24-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.S.T.TranslateService] Got value dfcz for work
+[16:42 24-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter d to в
+[16:42 24-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[16:42 24-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
+[16:42 24-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter z to я
+[16:42 24-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.u.TranslateWord] Translated full word dfcz to вася
