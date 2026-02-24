@@ -48,7 +48,7 @@ public class DictionaryForMap {
     }
 
     public Character getEquivalent(Character letter) {
-        log.info("Swapped the letter {}", letter);
+        log.info("Swapped the letter {} to {}", letter, dictionaryList.get(letter));
         return dictionaryList.get(letter);
     }
 

@@ -10,7 +10,7 @@ import org.springframework.web.context.annotation.RequestScope;
 import ru.translator.eng_rus.Service.TranslateService.TranslateService;
 
 @Slf4j
-@Controller
+@RestController
 @RequestMapping("/translate")
 public class TranslateController {
     private final TranslateService translateService;
@@ -19,10 +19,10 @@ public class TranslateController {
         this.translateService = translateService;
     }
 
-    @GetMapping("/label")
+    @GetMapping("/${str}")
     public String get(@PathVariable String str) {
         log.info("Got value {}", str);
         String fullStr = translateService.get(str);
-        return "translate-page";
+        return fullStr;
     }
 }
