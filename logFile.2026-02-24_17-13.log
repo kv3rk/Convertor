@@ -1,0 +1,11 @@
+[17:13 24-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 59512 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
+[17:13 24-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
+[17:13 24-02] [main] [INFO ] [r.t.e.C.DictionaryForMap] Initialized dictionary
+[17:13 24-02] [main] [INFO ] [r.t.e.EngRusApplication] Started EngRusApplication in 1.31 seconds (process running for 1.663)
+[17:13 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.T.TranslateController] Got value dfcz
+[17:13 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.S.T.TranslateService] Got value dfcz for work
+[17:13 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter d to в
+[17:13 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[17:13 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
+[17:13 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter z to я
+[17:13 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.u.TranslateWord] Translated full word dfcz to вася

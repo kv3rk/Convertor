@@ -2,15 +2,13 @@ package ru.translator.eng_rus.Controller.TranslateController;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.annotation.RequestScope;
 import ru.translator.eng_rus.Service.TranslateService.TranslateService;
 
 @Slf4j
-@RestController
+@Controller
 @RequestMapping("/translate")
 public class TranslateController {
     private final TranslateService translateService;
@@ -20,9 +18,10 @@ public class TranslateController {
     }
 
     @GetMapping("/{str}")
-    public String get(@PathVariable String str) {
+    public String get(@PathVariable String str, Model model) {
         log.info("Got value {}", str);
-        String fullStr = translateService.get(str);
-        return fullStr;
+        model.addAttribute("wrongString", str);
+        model.addAttribute("rightString", translateService.get(str));
+        return "translate-page";
     }
 }
