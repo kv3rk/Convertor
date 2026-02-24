@@ -1,0 +1,14 @@
+[01:55 25-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.T.TranslateController] Got necessary wrong string gbcmrf
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.S.T.TranslateService] Got value gbcmrf for work
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter g to п
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter b to и
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter m to ь
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter r to к
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.u.TranslateWord] Translated full word gbcmrf to писька
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Saved bean gbcmrf in database
+[01:55 25-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[01:55 25-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object

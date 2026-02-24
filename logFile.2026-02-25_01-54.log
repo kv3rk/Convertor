@@ -1,0 +1,4 @@
+[01:54 25-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 159700 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
+[01:54 25-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
+[01:54 25-02] [main] [INFO ] [r.t.e.C.DictionaryForMap] Initialized dictionary
+[01:54 25-02] [main] [INFO ] [r.t.e.EngRusApplication] Started EngRusApplication in 1.489 seconds (process running for 1.895)
