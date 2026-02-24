@@ -1,0 +1,26 @@
+<configuration>
+    <property name="path" value="src/main/resources/logs/"/>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${path}logFile.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- per minute rollover -->
+            <fileNamePattern>logFile.%d{yyyy-MM-dd_HH-mm}.log</fileNamePattern>
+
+            <!-- keep 30 days' worth of history capped at 3GB total size -->
+            <maxHistory>2</maxHistory>
+            <totalSizeCap>1MB</totalSizeCap>
+
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%d{HH:mm dd-MM}] [%thread] [%-5level] [%logger{5}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="ru.translator.eng_rus" level="INFO" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <root level="WARN">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
