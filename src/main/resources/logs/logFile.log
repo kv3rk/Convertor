@@ -1,25 +1,26 @@
-[17:15 24-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 60227 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
-[17:15 24-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
-[17:15 24-02] [main] [INFO ] [r.t.e.C.DictionaryForMap] Initialized dictionary
-[17:15 24-02] [main] [INFO ] [r.t.e.EngRusApplication] Started EngRusApplication in 1.326 seconds (process running for 1.733)
-[17:15 24-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Got value dfcz
-[17:15 24-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.S.T.TranslateService] Got value dfcz for work
-[17:15 24-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter d to в
-[17:15 24-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
-[17:15 24-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
-[17:15 24-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter z to я
-[17:15 24-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.u.TranslateWord] Translated full word dfcz to вася
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.T.TranslateController] Got value gbcmrjcnhtk
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.S.T.TranslateService] Got value gbcmrjcnhtk for work
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter g to п
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter b to и
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter m to ь
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter r to к
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter n to т
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter h to р
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter t to е
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter k to л
-[17:15 24-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.u.TranslateWord] Translated full word gbcmrjcnhtk to писькострел
+[19:57 24-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 92537 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
+[19:57 24-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
+[19:57 24-02] [main] [INFO ] [r.t.e.C.DictionaryForMap] Initialized dictionary
+[19:57 24-02] [main] [INFO ] [r.t.e.EngRusApplication] Started EngRusApplication in 1.273 seconds (process running for 1.65)
+[19:57 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.T.TranslateController] Got value jxrj
+[19:57 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.S.T.TranslateService] Got value jxrj for work
+[19:57 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
+[19:57 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter x to ч
+[19:57 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter r to к
+[19:57 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
+[19:57 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.u.TranslateWord] Translated full word jxrj to очко
+[19:57 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[19:57 24-02] [http-nio-8080-exec-2] [ERROR] [r.t.e.D.DTOTranslate] ERROR: duplicate key value violates unique constraint "wrongstring_pkey"
+  Detail: Key (id)=(1) already exists.
+[19:57 24-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[19:57 24-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.T.TranslateController] Got value jxrj
+[19:57 24-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.S.T.TranslateService] Got value jxrj for work
+[19:57 24-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
+[19:57 24-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter x to ч
+[19:57 24-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter r to к
+[19:57 24-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
+[19:57 24-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.u.TranslateWord] Translated full word jxrj to очко
+[19:57 24-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[19:57 24-02] [http-nio-8080-exec-3] [ERROR] [r.t.e.D.DTOTranslate] ERROR: duplicate key value violates unique constraint "wrongstring_pkey"
+  Detail: Key (id)=(2) already exists.
+[19:57 24-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
