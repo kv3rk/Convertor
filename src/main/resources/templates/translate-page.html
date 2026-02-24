@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Translate</title>
+</head>
+<body>
+<form action="#" th:action="@{/label}" th:object="${str}" method="get">
+    <label for="name">Paste the wrong string</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="String to translate">
+    <input type="submit" value="Add User">
+    <label>No text</label>
+</form>
+</body>
+</html>
