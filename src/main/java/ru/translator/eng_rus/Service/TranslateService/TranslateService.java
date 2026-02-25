@@ -1,10 +1,13 @@
 package ru.translator.eng_rus.Service.TranslateService;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.stereotype.Service;
 import ru.translator.eng_rus.Component.DictionaryForMap;
 import ru.translator.eng_rus.DTO.DTOTranslate;
 import ru.translator.eng_rus.POJO.WrongStringPOJO;
+import ru.translator.eng_rus.Scopes.IdPerRequest;
 import ru.translator.eng_rus.util.TranslateWord;
 
 import java.time.LocalDateTime;
@@ -14,20 +17,25 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Service
 public class TranslateService {
     private final TranslateWord translateWord;
-    private final AtomicInteger id = new AtomicInteger(1);
+    private final ObjectFactory<IdPerRequest> id;
     private final DTOTranslate dtoTranslate;
 
     public TranslateService(TranslateWord translateWord,
-                            DTOTranslate dtoTranslate) {
+                            DTOTranslate dtoTranslate,
+                            ObjectFactory<IdPerRequest> id) {
         this.translateWord = translateWord;
         this.dtoTranslate = dtoTranslate;
+        this.id = id;
     }
 
-    public String get(String str) {
+    public String get(String str, String uuid) {
+        IdPerRequest newId = id.getObject();
         log.info("Got value {} for work", str);
         String newString = translateWord.translateWord(str);
-        dtoTranslate.save(new WrongStringPOJO(id.getAndIncrement(), LocalDateTime.now(),
-                str, newString));
+        String totalId = uuid + "#" + newId.getId();
+        log.info("Registered totalId [{}]", totalId);
+        dtoTranslate.save(new WrongStringPOJO(totalId, LocalDateTime.now(), str,
+                newString));
         return newString;
     }
 }

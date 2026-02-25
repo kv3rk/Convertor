@@ -1,5 +1,0 @@
-[16:54 25-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 91865 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
-[16:54 25-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
-[16:54 25-02] [main] [INFO ] [r.t.e.C.DictionaryForMap] Initialized dictionary
-[16:54 25-02] [main] [INFO ] [r.t.e.EngRusApplication] Started EngRusApplication in 1.309 seconds (process running for 1.697)
-[16:54 25-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object

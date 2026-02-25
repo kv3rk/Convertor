@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ru.translator.eng_rus.POJO.WrongStringPOJO;
+import ru.translator.eng_rus.Scopes.UUIDPerSession;
 import ru.translator.eng_rus.Service.TranslateService.TranslateService;
 
 @Slf4j
@@ -13,9 +14,12 @@ import ru.translator.eng_rus.Service.TranslateService.TranslateService;
 @RequestMapping("/translate")
 public class TranslateController {
     private final TranslateService translateService;
+    private final UUIDPerSession uuidPerSession;
 
-    public TranslateController(TranslateService translateService) {
+    public TranslateController(TranslateService translateService,
+                               UUIDPerSession uuidPerSession) {
         this.translateService = translateService;
+        this.uuidPerSession = uuidPerSession;
     }
 
     @GetMapping("/")
@@ -31,7 +35,8 @@ public class TranslateController {
     public String save(@ModelAttribute("pojo") WrongStringPOJO pojo,
                        RedirectAttributes redirectAttributes) {
         log.info("Got necessary wrong string {}", pojo.getWrongString());
-        String result = translateService.get(pojo.getWrongString());
+        String result = translateService.get(pojo.getWrongString(),
+                uuidPerSession.getSessionId());
         pojo.setRightString(result);
         redirectAttributes.addFlashAttribute("pojo", pojo);
         return "redirect:/translate/";

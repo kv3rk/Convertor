@@ -24,7 +24,7 @@ public class DTOTranslate {
                 "rightstring) values (?,?,?,?);";
         try (Connection connection = getConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setInt(1, pojo.getId());
+            statement.setString(1, pojo.getId());
             statement.setObject(2, pojo.getLocalDateTime());
             statement.setString(3, pojo.getWrongString());
             statement.setString(4, pojo.getRightString());

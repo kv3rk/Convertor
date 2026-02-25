@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class WrongStringPOJO {
-    private Integer id;
+    private String id;
     private LocalDateTime localDateTime;
     private String wrongString;
     private String rightString;
