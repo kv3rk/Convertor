@@ -16,6 +16,8 @@
                 <th>Creation time</th>
                 <th>Wrong</th>
                 <th>Right</th>
+                <th><a th:href="@{/translate/delete}" class="btn btn-danger w-50">
+                    Delete all</a></th>
             </tr>
             </thead>
             <tbody>
@@ -24,6 +26,7 @@
                 <td th:text="${pojo.localDateTime}"></td>
                 <td th:text="${pojo.wrongString}"></td>
                 <td th:text="${pojo.rightString}"></td>
+                <td><a class="btn btn-danger w-30">remove</a></td>
             </tr>
             </tbody>
         </table>

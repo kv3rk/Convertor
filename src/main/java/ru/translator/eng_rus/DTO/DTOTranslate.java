@@ -59,6 +59,7 @@ public class DTOTranslate {
         }
         return fullList;
     }
+
     public List<WrongStringPOJO> findRecent() {
         String sql = "select wrongstring, rightstring from wrongstring group by id, \n" +
                 "localdatetime order by localdatetime  desc limit 2 offset 0;";
@@ -81,4 +82,18 @@ public class DTOTranslate {
         }
         return recentList;
     }
+
+    public void removeAll() {
+        String sql = "delete from wrongstring *;";
+        try (Connection connection = getConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.executeUpdate();
+            log.info("Deleted all objects from database");
+            log.info("Closed connection to database");
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            log.info("Closed connection to database");
+        }
+    }
+
 }

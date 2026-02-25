@@ -52,4 +52,12 @@ public class TranslateController {
         model.addAttribute("allList", translateService.getAll());
         return "history";
     }
+
+    @GetMapping("/delete")
+    public String deleteAll() {
+        log.info("Redirected to sub - history.html");
+        translateService.removeAll();
+        return "redirect:/translate/history";
+    }
+
 }

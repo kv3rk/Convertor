@@ -1,77 +1,59 @@
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.T.TranslateController] Redirected to main - translate-page.html
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.T.TranslateController] Got necessary wrong string Rhfcbdst ltdierb cjcen vjq juhjvysq [eq b 'nj ghfdlf? lf ltnrf
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.S.UUIDPerSession] Initialized new [session] id [31e8]
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.S.T.TranslateService] Got value Rhfcbdst ltdierb cjcen vjq juhjvysq [eq b 'nj ghfdlf? lf ltnrf for work
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter r to К
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter h to р
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter b to и
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter d to в
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter s to ы
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter t to е
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter t to е
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter d to в
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter i to ш
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter e to у
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter r to к
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter b to и
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter e to у
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter n to т
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter v to м
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter q to й
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter u to г
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter h to р
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter v to м
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter y to н
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter s to ы
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter q to й
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter [ to х
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter e to у
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter q to й
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter b to и
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter ' to э
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter n to т
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter g to п
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter h to р
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter d to в
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter ? to ,
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter t to е
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter n to т
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter r to к
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.u.TranslateWord] Translated full word Rhfcbdst ltdierb cjcen vjq juhjvysq [eq b 'nj ghfdlf? lf ltnrf to Красивые девшуки сосут мой огромный хуй и это правда, да детка
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.S.IdPerRequest] Initialized new [request] id [b3]
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.S.T.TranslateService] Registered totalId [31e8#b3]
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.D.DTOTranslate] Saved bean Rhfcbdst ltdierb cjcen vjq juhjvysq [eq b 'nj ghfdlf? lf ltnrf in database
-[23:54 25-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[23:54 25-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
-[23:54 25-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[23:54 25-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
-[23:54 25-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[23:54 25-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.T.TranslateController] Redirected to main - translate-page.html
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.T.TranslateController] Got necessary wrong string Z yt ltlbycrfql/ Djghjcs&&&
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.S.UUIDPerSession] Initialized new [session] id [1357]
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.S.T.TranslateService] Got value Z yt ltlbycrfql/ Djghjcs&&& for work
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter z to Я
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter y to н
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter t to е
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter t to е
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter b to и
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter y to н
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter r to к
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter q to й
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter / to .
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter d to В
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter g to п
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter h to р
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter s to ы
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter & to ?
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter & to ?
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter & to ?
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.u.TranslateWord] Translated full word Z yt ltlbycrfql/ Djghjcs&&& to Я не дединскайд. Вопросы???
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.S.IdPerRequest] Initialized new [request] id [d1]
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.S.T.TranslateService] Registered totalId [1357#d1]
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.D.DTOTranslate] Saved bean Z yt ltlbycrfql/ Djghjcs&&& in database
+[00:30 26-02] [http-nio-8080-exec-9] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[00:30 26-02] [http-nio-8080-exec-10] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
+[00:30 26-02] [http-nio-8080-exec-10] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[00:30 26-02] [http-nio-8080-exec-10] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
+[00:30 26-02] [http-nio-8080-exec-10] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[00:30 26-02] [http-nio-8080-exec-10] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
+[00:30 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page history.html
+[00:30 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[00:30 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.D.DTOTranslate] Got all pojo objects from database
+[00:30 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[00:30 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.T.TranslateController] Redirected to sub - history.html
+[00:30 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[00:30 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Deleted all objects from database
+[00:30 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[00:30 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page history.html
+[00:30 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[00:30 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.D.DTOTranslate] Got all pojo objects from database
+[00:30 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[00:30 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
+[00:30 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[00:30 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
+[00:30 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[00:30 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
