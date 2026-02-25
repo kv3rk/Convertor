@@ -39,7 +39,11 @@ public class TranslateService {
     }
 
     public List<WrongStringPOJO> getAll() {
-        log.info("Handed over the list of all pojos to model");
+        //log.info("Handed over the list of all pojos to model");
         return dtoTranslate.findAll();
+    }
+    public List<WrongStringPOJO> getRecentHistory(){
+        //log.info("Handed over the list of recent 2 pojos to model");
+        return dtoTranslate.findRecent();
     }
 }

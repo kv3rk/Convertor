@@ -28,6 +28,8 @@ public class TranslateController {
         if (!model.containsAttribute("pojo")) {
             model.addAttribute("pojo", new WrongStringPOJO());
         }
+        model.addAttribute("recentList", translateService
+                .getRecentHistory());
         log.info("Initialized absent POJO object");
         return "translate-page";
     }
@@ -43,8 +45,9 @@ public class TranslateController {
         redirectAttributes.addFlashAttribute("pojo", pojo);
         return "redirect:/translate/";
     }
+
     @GetMapping("/history")
-    public String showHistory(Model model){
+    public String showHistory(Model model) {
         log.info("Transfer to page history.html");
         model.addAttribute("allList", translateService.getAll());
         return "history";

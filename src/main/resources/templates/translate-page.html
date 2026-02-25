@@ -24,6 +24,18 @@
         <h4>Result:</h4>
         <span th:text="${pojo.rightString}" class="display-6"></span>
     </div>
+    <div class="recenthistory mt-5">
+        <h5 class="mb-1 text-center">Recent changes</h5>
+        <table style="width:80%" border="2" class="table table-striped table-responsive-md"
+        align="center">
+            <tbody>
+            <tr th:each="pojo:${recentList}">
+                <td th:text="${pojo.wrongString}"></td>
+                <td th:text="${pojo.rightString}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="history text-center pt-5">
         <a th:href="@{/translate/history}" class="btn btn-primary w-30">Show full history</a>
     </div>

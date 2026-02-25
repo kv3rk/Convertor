@@ -39,7 +39,7 @@ public class DTOTranslate {
 
     public List<WrongStringPOJO> findAll() {
         String sql = "select * from wrongstring;";
-        List<WrongStringPOJO> list = new ArrayList<>();
+        List<WrongStringPOJO> fullList = new ArrayList<>();
         try (Connection connection = getConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql);
              ResultSet rs = preparedStatement.executeQuery()) {
@@ -49,7 +49,7 @@ public class DTOTranslate {
                         toLocalDateTime();
                 String wrong = rs.getString("wrongstring");
                 String right = rs.getString("rightstring");
-                list.add(new WrongStringPOJO(id, localDateTime, wrong, right));
+                fullList.add(new WrongStringPOJO(id, localDateTime, wrong, right));
             }
             log.info("Got all pojo objects from database");
             log.info("Closed connection to database");
@@ -57,6 +57,28 @@ public class DTOTranslate {
             log.error(e.getMessage());
             log.info("Closed connection to database");
         }
-        return list;
+        return fullList;
+    }
+    public List<WrongStringPOJO> findRecent() {
+        String sql = "select wrongstring, rightstring from wrongstring group by id, \n" +
+                "localdatetime order by localdatetime  desc limit 2 offset 0;";
+        List<WrongStringPOJO> recentList = new ArrayList<>();
+        try (Connection connection = getConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql);
+             ResultSet rs = preparedStatement.executeQuery()) {
+            while (rs.next()) {
+                String id = null;
+                LocalDateTime localDateTime = null;
+                String wrong = rs.getString("wrongstring");
+                String right = rs.getString("rightstring");
+                recentList.add(new WrongStringPOJO(id, localDateTime, wrong, right));
+            }
+            log.info("Got 2 recent pojo objects from database");
+            log.info("Closed connection to database");
+        } catch (SQLException e) {
+            log.error(e.getMessage());
+            log.info("Closed connection to database");
+        }
+        return recentList;
     }
 }

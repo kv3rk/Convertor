@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EngRusApplication {
 
     public static void main(String[] args) {
-
         SpringApplication.run(EngRusApplication.class, args);
     }
 
