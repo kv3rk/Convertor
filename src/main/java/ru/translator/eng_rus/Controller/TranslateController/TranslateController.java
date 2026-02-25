@@ -24,6 +24,7 @@ public class TranslateController {
 
     @GetMapping("/")
     public String showPage(Model model) {
+        log.info("Transfer to page translate-page.html");
         if (!model.containsAttribute("pojo")) {
             model.addAttribute("pojo", new WrongStringPOJO());
         }
@@ -34,11 +35,18 @@ public class TranslateController {
     @PostMapping("/convert")
     public String save(@ModelAttribute("pojo") WrongStringPOJO pojo,
                        RedirectAttributes redirectAttributes) {
+        log.info("Redirected to main - translate-page.html");
         log.info("Got necessary wrong string {}", pojo.getWrongString());
         String result = translateService.get(pojo.getWrongString(),
                 uuidPerSession.getSessionId());
         pojo.setRightString(result);
         redirectAttributes.addFlashAttribute("pojo", pojo);
         return "redirect:/translate/";
+    }
+    @GetMapping("/history")
+    public String showHistory(Model model){
+        log.info("Transfer to page history.html");
+        model.addAttribute("allList", translateService.getAll());
+        return "history";
     }
 }

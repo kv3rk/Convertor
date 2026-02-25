@@ -1,17 +1,16 @@
 package ru.translator.eng_rus.Service.TranslateService;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.stereotype.Service;
-import ru.translator.eng_rus.Component.DictionaryForMap;
 import ru.translator.eng_rus.DTO.DTOTranslate;
 import ru.translator.eng_rus.POJO.WrongStringPOJO;
 import ru.translator.eng_rus.Scopes.IdPerRequest;
 import ru.translator.eng_rus.util.TranslateWord;
 
 import java.time.LocalDateTime;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -37,5 +36,10 @@ public class TranslateService {
         dtoTranslate.save(new WrongStringPOJO(totalId, LocalDateTime.now(), str,
                 newString));
         return newString;
+    }
+
+    public List<WrongStringPOJO> getAll() {
+        log.info("Handed over the list of all pojos to model");
+        return dtoTranslate.findAll();
     }
 }
