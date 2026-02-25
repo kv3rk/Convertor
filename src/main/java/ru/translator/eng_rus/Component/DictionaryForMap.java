@@ -44,12 +44,43 @@ public class DictionaryForMap {
         dictionaryList.put('m', 'ь');
         dictionaryList.put(',', 'б');
         dictionaryList.put('.', 'ю');
+        dictionaryList.put('`', 'ё');
+        dictionaryList.put('~', 'Ё');
+        dictionaryList.put('<', 'Б');
+        dictionaryList.put('>', 'Ю');
+        dictionaryList.put(':', 'Ж');
+        dictionaryList.put('\"', 'Э');
+        dictionaryList.put('{', 'х');
+        dictionaryList.put('}', 'ъ');
+        dictionaryList.put('/', '.');
+        dictionaryList.put('?', ',');
+        dictionaryList.put('&', '?');
+        dictionaryList.put('@', '\"');
+        dictionaryList.put('#', '№');
+        dictionaryList.put('$', ';');
+        dictionaryList.put('^', ':');
+        dictionaryList.put('|', '/');
         log.info("Initialized dictionary");
     }
 
     public Character getEquivalent(Character letter) {
-        log.info("Swapped the letter {} to {}", letter, dictionaryList.get(letter));
-        return dictionaryList.get(letter);
+
+        if (Character.isLetter(letter)) {
+            if (Character.isLowerCase(letter)) {
+                log.info("Swapped the letter {} to {}", letter, dictionaryList.get(
+                        letter));
+                return dictionaryList.get(letter);
+            } else {
+                letter = Character.toLowerCase(letter);
+                log.info("Swapped the letter {} to {}", letter, Character.toUpperCase
+                        (dictionaryList.get(letter)));
+                return Character.toUpperCase(dictionaryList.get(letter));
+            }
+        } else {
+            log.info("Swapped the letter {} to {}", letter, dictionaryList.getOrDefault(
+                    letter, letter));
+            return dictionaryList.getOrDefault(letter, letter);
+        }
     }
 
 }

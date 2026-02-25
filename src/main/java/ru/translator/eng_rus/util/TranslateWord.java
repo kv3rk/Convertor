@@ -16,7 +16,7 @@ public class TranslateWord {
 
     public String translateWord(String str) {
         StringBuilder newString = new StringBuilder();
-        char[] list = str.toLowerCase().trim().toCharArray();
+        char[] list = str.trim().toCharArray();
         for (int i = 0; i < list.length; i++) {
             list[i] = dictionary.getEquivalent(list[i]);
             newString.append(list[i]);
