@@ -60,4 +60,11 @@ public class TranslateController {
         return "redirect:/translate/history";
     }
 
+    @GetMapping("/deleteNote/{id}")
+    public String delete(@PathVariable(value = "id") String id) {
+        log.info("Redirected to sub - history.html");
+        translateService.removeNote(id);
+        return "redirect:/translate/history";
+    }
+
 }

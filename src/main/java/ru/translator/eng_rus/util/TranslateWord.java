@@ -21,7 +21,7 @@ public class TranslateWord {
             list[i] = dictionary.getEquivalent(list[i]);
             newString.append(list[i]);
         }
-        log.info("Translated full word {} to {}", str, newString);
+        log.info("Translated full line {} to {}", str, newString);
         return newString.toString();
     }
 }

@@ -1,5 +1,6 @@
 package ru.translator.eng_rus.DTO;
 
+import org.springframework.beans.factory.annotation.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 import ru.translator.eng_rus.POJO.WrongStringPOJO;
@@ -14,6 +15,8 @@ import java.util.List;
 @Repository
 public class DTOTranslate {
     private final GetConnection getConnection;
+    @Value("${spring.value.closeConnection}")
+    private String closedConnection;
 
     public DTOTranslate(GetConnection getConnection) {
         this.getConnection = getConnection;
@@ -30,10 +33,9 @@ public class DTOTranslate {
             statement.setString(4, pojo.getRightString());
             statement.executeUpdate();
             log.info("Saved bean {} in database", pojo.getWrongString());
-            log.info("Closed connection to database");
+            log.info(closedConnection);
         } catch (SQLException e) {
             log.error(e.getMessage());
-            log.info("Closed connection to database");
         }
     }
 
@@ -52,10 +54,9 @@ public class DTOTranslate {
                 fullList.add(new WrongStringPOJO(id, localDateTime, wrong, right));
             }
             log.info("Got all pojo objects from database");
-            log.info("Closed connection to database");
+            log.info(closedConnection);
         } catch (SQLException e) {
             log.error(e.getMessage());
-            log.info("Closed connection to database");
         }
         return fullList;
     }
@@ -75,10 +76,9 @@ public class DTOTranslate {
                 recentList.add(new WrongStringPOJO(id, localDateTime, wrong, right));
             }
             log.info("Got 2 recent pojo objects from database");
-            log.info("Closed connection to database");
+            log.info(closedConnection);
         } catch (SQLException e) {
             log.error(e.getMessage());
-            log.info("Closed connection to database");
         }
         return recentList;
     }
@@ -88,11 +88,23 @@ public class DTOTranslate {
         try (Connection connection = getConnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.executeUpdate();
-            log.info("Deleted all objects from database");
-            log.info("Closed connection to database");
+            log.info("Removed all objects from database");
+            log.info(closedConnection);
         } catch (SQLException e) {
             log.error(e.getMessage());
-            log.info("Closed connection to database");
+        }
+    }
+
+    public void remove(String strId) {
+        String sql = "delete from wrongstring where id=?;";
+        try (Connection connection = getConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, strId);
+            preparedStatement.executeUpdate();
+            log.info("Removed {} objects from database", strId);
+            log.info(closedConnection);
+        } catch (SQLException e) {
+            log.error(e.getMessage());
         }
     }
 

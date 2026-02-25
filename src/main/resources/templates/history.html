@@ -26,7 +26,7 @@
                 <td th:text="${pojo.localDateTime}"></td>
                 <td th:text="${pojo.wrongString}"></td>
                 <td th:text="${pojo.rightString}"></td>
-                <td><a class="btn btn-danger w-30">remove</a></td>
+                <td><a th:href="@{/translate/deleteNote/{id}(id=${pojo.id})}" class="btn btn-danger w-30">remove</a></td>
             </tr>
             </tbody>
         </table>

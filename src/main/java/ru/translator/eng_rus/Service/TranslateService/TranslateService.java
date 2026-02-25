@@ -9,7 +9,6 @@ import ru.translator.eng_rus.Scopes.IdPerRequest;
 import ru.translator.eng_rus.util.TranslateWord;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -50,5 +49,9 @@ public class TranslateService {
 
     public void removeAll() {
         dtoTranslate.removeAll();
+    }
+
+    public void removeNote(String id){
+        dtoTranslate.remove(id);
     }
 }
