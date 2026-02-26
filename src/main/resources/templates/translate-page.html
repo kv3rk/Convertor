@@ -21,8 +21,12 @@
     </div>
 
     <div th:if="${pojo.rightString != null}" class="alert alert-success text-center">
-        <h4>Result:</h4>
+        <h3>Result:</h3>
         <span th:text="${pojo.rightString}" class="display-6"></span>
+    </div>
+    <div th:if="${#fields.hasErrors('pojo.wrongString')}" class="alert alert-danger text-center">
+        <h3>Error:</h3>
+        <span th:errors="${pojo.wrongString}" class="display-6"></span>
     </div>
     <div class="recenthistory mt-5">
         <h5 class="mb-1 text-center">Recent changes</h5>

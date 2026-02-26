@@ -1,34 +1,79 @@
-[01:24 26-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 195117 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
-[01:24 26-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
-[01:24 26-02] [main] [INFO ] [r.t.e.C.DictionaryForMap] Initialized dictionary
-[01:24 26-02] [main] [INFO ] [r.t.e.EngRusApplication] Started EngRusApplication in 1.43 seconds (process running for 1.804)
-[01:24 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
-[01:24 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[01:24 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
-[01:24 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[01:24 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
-[01:24 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page history.html
-[01:24 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[01:24 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Got all pojo objects from database
-[01:24 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[01:24 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.T.TranslateController] Redirected to sub - history.html
-[01:24 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[01:24 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.D.DTOTranslate] Removed ce59#64 objects from database
-[01:24 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[01:24 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page history.html
-[01:24 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[01:24 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.D.DTOTranslate] Got all pojo objects from database
-[01:24 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[01:24 26-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.T.TranslateController] Redirected to sub - history.html
-[01:24 26-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[01:24 26-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.D.DTOTranslate] Removed ce59#3b objects from database
-[01:24 26-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[01:24 26-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page history.html
-[01:24 26-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[01:24 26-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.D.DTOTranslate] Got all pojo objects from database
-[01:24 26-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[01:24 26-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
-[01:24 26-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[01:24 26-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
-[01:24 26-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[01:24 26-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
+[07:53 26-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 23121 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
+[07:53 26-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
+[07:53 26-02] [main] [INFO ] [r.t.e.C.DictionaryForMap] Initialized dictionary
+[07:53 26-02] [main] [INFO ] [r.t.e.EngRusApplication] Started EngRusApplication in 1.564 seconds (process running for 1.969)
+[07:53 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
+[07:53 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[07:53 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
+[07:53 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[07:53 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
+[07:53 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.T.TranslateController] Redirected to main - translate-page.html
+[07:53 26-02] [http-nio-8080-exec-2] [ERROR] [r.t.e.C.T.TranslateController] Only english keyboard
+[07:53 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[07:53 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
+[07:53 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.T.TranslateController] Redirected to main - translate-page.html
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.T.TranslateController] Got necessary wrong string Kflyj gllfhfcs dfib[ vfvfjr t,fk
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.S.UUIDPerSession] Initialized new [session] id [ef7e]
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.S.T.TranslateService] Got value Kflyj gllfhfcs dfib[ vfvfjr t,fk for work
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter k to Л
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter y to н
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter g to п
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter l to д
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter h to р
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter c to с
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter s to ы
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter d to в
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter i to ш
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter b to и
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter [ to х
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter v to м
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter v to м
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter j to о
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter r to к
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter   to  
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter t to е
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter , to б
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter f to а
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.DictionaryForMap] Swapped the letter k to л
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.u.TranslateWord] Translated full line Kflyj gllfhfcs dfib[ vfvfjr t,fk to Ладно пддарасы ваших мамаок ебал
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.S.IdPerRequest] Initialized new [request] id [84]
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.S.T.TranslateService] Registered totalId [ef7e#84]
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.D.DTOTranslate] Saved bean Kflyj gllfhfcs dfib[ vfvfjr t,fk in database
+[07:53 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[07:53 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
+[07:53 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[07:53 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
+[07:53 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[07:53 26-02] [http-nio-8080-exec-4] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
+[07:53 26-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page history.html
+[07:53 26-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[07:53 26-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.D.DTOTranslate] Got all pojo objects from database
+[07:53 26-02] [http-nio-8080-exec-5] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[07:53 26-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
+[07:53 26-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[07:53 26-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
+[07:53 26-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[07:53 26-02] [http-nio-8080-exec-6] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
+[07:53 26-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page history.html
+[07:53 26-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[07:53 26-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.D.DTOTranslate] Got all pojo objects from database
+[07:53 26-02] [http-nio-8080-exec-7] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[07:53 26-02] [http-nio-8080-exec-8] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
+[07:53 26-02] [http-nio-8080-exec-8] [INFO ] [r.t.e.u.GetConnection] Open connection to database
+[07:53 26-02] [http-nio-8080-exec-8] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
+[07:53 26-02] [http-nio-8080-exec-8] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
+[07:53 26-02] [http-nio-8080-exec-8] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
