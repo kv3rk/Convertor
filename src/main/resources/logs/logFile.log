@@ -1,18 +1,7 @@
-[08:29 26-02] [main] [INFO ] [r.t.e.EngRusApplication] Starting EngRusApplication using Java 21.0.10 with PID 31190 (/home/kv3rk/full_projects/eng-rus/target/classes started by kv3rk in /home/kv3rk/full_projects/eng-rus)
-[08:29 26-02] [main] [INFO ] [r.t.e.EngRusApplication] No active profile set, falling back to 1 default profile: "default"
-[08:29 26-02] [main] [INFO ] [r.t.e.C.DictionaryForMap] Initialized dictionary
-[08:29 26-02] [main] [INFO ] [r.t.e.EngRusApplication] Started EngRusApplication in 1.659 seconds (process running for 2.149)
-[08:29 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
-[08:29 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[08:29 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
-[08:29 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[08:29 26-02] [http-nio-8080-exec-1] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
-[08:29 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page history.html
-[08:29 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[08:29 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Got all pojo objects from database
-[08:29 26-02] [http-nio-8080-exec-2] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[08:29 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
-[08:29 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.u.GetConnection] Open connection to database
-[08:29 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.D.DTOTranslate] Got 2 recent pojo objects from database
-[08:29 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.D.DTOTranslate] Closed connection to database
-[08:29 26-02] [http-nio-8080-exec-3] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object
+[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TestTranslateController] Starting TestTranslateController using Java 21.0.10 with PID 102133 (started by kv3rk in /home/kv3rk/full_projects/eng-rus)
+[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TestTranslateController] No active profile set, falling back to 1 default profile: "default"
+[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TestTranslateController] Started TestTranslateController in 2.007 seconds (process running for 3.049)
+[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TranslateController] Redirected to main - translate-page.html
+[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TranslateController] Got necessary wrong string ghbdtn
+[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
+[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object

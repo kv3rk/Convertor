@@ -1,15 +1,11 @@
 package ru.translator.eng_rus.Controller.TranslateController;
 
-import com.sun.net.httpserver.HttpServer;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.autoconfigure.graphql.GraphQlProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ru.translator.eng_rus.POJO.WrongStringPOJO;
 import ru.translator.eng_rus.Scopes.UUIDPerSession;
