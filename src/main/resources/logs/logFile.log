@@ -1,7 +1,0 @@
-[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TestTranslateController] Starting TestTranslateController using Java 21.0.10 with PID 102133 (started by kv3rk in /home/kv3rk/full_projects/eng-rus)
-[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TestTranslateController] No active profile set, falling back to 1 default profile: "default"
-[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TestTranslateController] Started TestTranslateController in 2.007 seconds (process running for 3.049)
-[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TranslateController] Redirected to main - translate-page.html
-[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TranslateController] Got necessary wrong string ghbdtn
-[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TranslateController] Transfer to page translate-page.html
-[08:16 27-02] [main] [INFO ] [r.t.e.C.T.TranslateController] Initialized absent POJO object

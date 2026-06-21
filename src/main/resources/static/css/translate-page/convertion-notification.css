@@ -1,0 +1,22 @@
+#success-convertion-notification, #failed-convertion-notification {
+
+    display: none;
+    text-align: center;
+
+}
+
+#success-convertion-notification-label, #failed-convertion-notification-label {
+
+    font-family: "Arial Rounded MT Bold", serif;
+    font-weight: bold;
+    font-size: 24px;
+
+}
+
+#success-convertion-notification-text, #failed-convertion-notification-text {
+
+    font-family: Arial, cursive;
+    font-weight: lighter;
+    font-size: 16px;
+
+}

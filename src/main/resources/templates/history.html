@@ -1,39 +1,91 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
 <head>
+
     <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
     <title>History</title>
+
+    <!--    Script files-->
+    <script defer src="/js/history-page/removing.js"></script>
+    <script defer src="/js/history-page/reset_after_removing.js"></script>
+
+    <!--    Page icon-->
+    <link rel="icon" type="image/x-icon" href="/img/history-page/history.png"/>
+
 </head>
+
+
 <body class="bg-light">
+
+<!--Main container-->
 <div class="container text-center mt-5">
+
+    <!--    Full translate history table-->
     <div class="tablecontainer">
+
         <h3 class="mb-5">Convertion history</h3>
-        <table style="width:100%" border="3" class="table table-striped table-responsive-md">
+
+        <table style="width:100%" border="3"
+               class="table table-striped table-responsive-md"
+               id="full-history-table">
+
             <thead>
+
             <tr>
-                <th>Id</th>
                 <th>Creation time</th>
                 <th>Wrong</th>
                 <th>Right</th>
-                <th><a th:href="@{/translate/delete}" class="btn btn-danger w-50">
-                    Delete all</a></th>
+                <th>
+                    <button id="delete-all-button"
+                            onclick="delete_all_button(event)"
+                            class="btn btn-danger w-50">
+                        Delete all
+                    </button>
+                </th>
             </tr>
+
             </thead>
-            <tbody>
-            <tr th:each="pojo:${allList}">
-                <td th:text="${pojo.id}"></td>
-                <td th:text="${pojo.localDateTime}"></td>
-                <td th:text="${pojo.wrongString}"></td>
-                <td th:text="${pojo.rightString}"></td>
-                <td><a th:href="@{/translate/deleteNote/{id}(id=${pojo.id})}" class="btn btn-danger w-30">remove</a></td>
+
+            <tbody id="full-history-table-body">
+
+            <tr th:each="element : ${full_history}">
+                <td th:text="${element.time}"></td>
+                <td th:text="${element.wrongString}"></td>
+                <td th:text="${element.rightString}"></td>
+                <td>
+                    <button th:id="${element.id}"
+                            onclick="delete_target_button(event)"
+                            class="btn btn-danger w-30">
+                        Remove
+                    </button>
+                </td>
             </tr>
+
             </tbody>
+
         </table>
+
     </div>
+
+    <!--Main translate page-->
     <div class="backbtn mt-5">
-        <a th:href="@{/translate/}" class="btn btn-primary">Back</a>
+
+        <a th:href="@{/translate/main}" class="btn btn-primary mb-2 mt-2">Back</a>
+
     </div>
+
+
 </div>
+
+
 </body>
+
+
 </html>
