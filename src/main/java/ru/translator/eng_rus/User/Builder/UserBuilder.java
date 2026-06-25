@@ -10,8 +10,8 @@ import java.util.Optional;
 @Component
 public class UserBuilder {
 
-    private String nickname = "anton";
-    private String password = "123";
+    private String nickname = "Anton";
+    private String password = "java2905";
     private Role role = null;
     private String roleName = "none";
 
