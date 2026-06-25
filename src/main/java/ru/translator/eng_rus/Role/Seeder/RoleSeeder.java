@@ -1,5 +1,6 @@
 package ru.translator.eng_rus.Role.Seeder;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @Component
+@Slf4j
 public class RoleSeeder implements ApplicationListener<ContextRefreshedEvent> {
 
     private final RoleRepository roleRepository;
@@ -45,7 +47,11 @@ public class RoleSeeder implements ApplicationListener<ContextRefreshedEvent> {
             Optional<Role> optionalRole = Optional.ofNullable(
                     roleRepository.findByRole(roleName)
             );
-            optionalRole.ifPresentOrElse(System.out::println, () -> {
+            optionalRole.ifPresentOrElse((x) -> {
+
+                log.info("[{} created at: {}]", x.getRole(), x.getCreatedAt());
+
+            }, () -> {
 
                 Role roleToCreate = new Role();
                 roleToCreate.setRole(roleName);
