@@ -1,0 +1,55 @@
+/* =========================
+   Global
+   ========================= */
+
+body {
+    background-color: #f5f7fa;
+    color: #2d3748;
+    font-family: Inter, "Segoe UI", sans-serif;
+}
+
+/* =========================
+   Primary Buttons
+   ========================= */
+
+.btn-primary {
+    background-color: #4f6d8a;
+    border-color: #4f6d8a;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #405a73;
+    border-color: #405a73;
+}
+
+/* =========================
+   Table
+   ========================= */
+
+.table {
+    color: #374151;
+    background-color: #ffffff;
+}
+
+.table td,
+.table th {
+    border-color: #e5e7eb;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9fafb;
+}
+
+/* =========================
+   Card-style containers
+   (used by login-card, .card, .tablecontainer)
+   ========================= */
+
+.card,
+.login-card,
+.tablecontainer {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
