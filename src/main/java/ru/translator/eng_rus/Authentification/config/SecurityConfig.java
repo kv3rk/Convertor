@@ -7,14 +7,15 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import ru.translator.eng_rus.Authentification.Service.InMemoryUserDetailsService;
 import ru.translator.eng_rus.User.Repository.UserRepository;
+
+import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -32,25 +33,19 @@ public class SecurityConfig {
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
 
-        UserDetails user1 = User.builder()
-                .username("Anton")
-                .password(encoder.encode("java2905"))
-                .roles("USER")
-                .build();
+        List<ru.translator.eng_rus.User.Entity.User> dbUsers = userRepository.findAll();
 
-        UserDetails user2 = User.builder()
-                .username("Petya")
-                .password(encoder.encode("java2905"))
-                .roles("USER")
-                .build();
+        List<UserDetails> resultList = dbUsers.stream().map(x -> {
+                    UserDetails user = org.springframework.security.core.userdetails.User
+                            .withUsername(x.getUsername())
+                            .password(encoder.encode(x.getPassword()))
+                            .authorities(x.getAuthorities())
+                            .build();
+                    return user;
+                }
+        ).toList();
 
-        UserDetails admin = User.builder()
-                .username("Masha")
-                .password(encoder.encode("java2905"))
-                .roles("ADMIN")
-                .build();
-
-        return new InMemoryUserDetailsManager(user1, user2, admin);
+        return new InMemoryUserDetailsService(resultList);
     }
 
     @Bean
