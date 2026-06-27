@@ -7,15 +7,12 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import ru.translator.eng_rus.Authentification.Service.InMemoryUserDetailsService;
+import ru.translator.eng_rus.Authentification.Service.CustomUserDetailsService;
 import ru.translator.eng_rus.User.Repository.UserRepository;
-
-import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -31,21 +28,9 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService(PasswordEncoder encoder) {
+    public UserDetailsService userDetailsService() {
 
-        List<ru.translator.eng_rus.User.Entity.User> dbUsers = userRepository.findAll();
-
-        List<UserDetails> resultList = dbUsers.stream().map(x -> {
-                    UserDetails user = org.springframework.security.core.userdetails.User
-                            .withUsername(x.getUsername())
-                            .password(encoder.encode(x.getPassword()))
-                            .authorities(x.getAuthorities())
-                            .build();
-                    return user;
-                }
-        ).toList();
-
-        return new InMemoryUserDetailsService(resultList);
+        return new CustomUserDetailsService(userRepository);
     }
 
     @Bean
@@ -54,7 +39,7 @@ public class SecurityConfig {
 
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
 
-        provider.setUserDetailsService(userDetailsService(new BCryptPasswordEncoder()));
+        provider.setUserDetailsService(userDetailsService());
         provider.setPasswordEncoder(passwordEncoder());
 
         return provider;

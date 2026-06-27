@@ -15,7 +15,6 @@ public class UserBuilder {
     private Role role = null;
     private String roleName = "none";
 
-
     public UserBuilder withNickname(String nickname) {
         this.nickname = nickname;
         return this;

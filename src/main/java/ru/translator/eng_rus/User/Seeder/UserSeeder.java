@@ -3,6 +3,7 @@ package ru.translator.eng_rus.User.Seeder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import ru.translator.eng_rus.Role.Enum.RoleEnum;
 import ru.translator.eng_rus.Role.Repository.RoleRepository;
@@ -23,15 +24,20 @@ public class UserSeeder implements ApplicationListener<ContextRefreshedEvent> {
     private final RoleRepository roleRepository;
     private final UserMapper userMapper;
     private final UserBuilder userBuilder;
+    private final PasswordEncoder passwordEncoder;
+
 
     public UserSeeder(UserRepository userRepository,
                       RoleRepository roleRepository,
                       UserMapper userMapper,
-                      UserBuilder userBuilder) {
+                      UserBuilder userBuilder,
+                      PasswordEncoder passwordEncoder) {
+
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.userMapper = userMapper;
         this.userBuilder = userBuilder;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -72,7 +78,7 @@ public class UserSeeder implements ApplicationListener<ContextRefreshedEvent> {
 
                         User user = new UserBuilder()
                                 .withNickname(x.nickname())
-                                .withPassword(x.password())
+                                .withPassword(passwordEncoder.encode(x.password()))
                                 .withRole(x.role())
                                 .build();
 
