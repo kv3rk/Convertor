@@ -13,7 +13,7 @@ body {
    Login Card
    ========================= */
 
-.login-card {
+.auth-card {
     width: 420px;
     padding: 40px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
@@ -141,7 +141,7 @@ body {
    (wrong login, duplicate registration, etc.)
    ========================= */
 
-#user-registration-failure-label {
+#user-auth-failure-label {
     display: block;
 
     margin-bottom: 16px;
