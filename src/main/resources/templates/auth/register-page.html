@@ -33,15 +33,15 @@
         <input type="text"
                th:field="*{nickname}"
                class="form-control"
-               placeholder="Username"
-               id="username-field">
+               placeholder="Username">
+
         <span class="field-error" th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}"></span>
 
         <input type="password"
                th:field="*{password}"
                class="form-control"
-               placeholder="Password"
-               id="username-pass">
+               placeholder="Password">
+
         <span class="field-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
 
         <button class="btn-auth" type="submit">
