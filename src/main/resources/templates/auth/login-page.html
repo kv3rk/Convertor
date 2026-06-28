@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org">
-
-
 <head>
-
     <meta charset="UTF-8">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-          rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Convertor</title>
-
-    <!--    CSS files-->
-    <link rel="stylesheet" href="/css/login-page/login-page-style.css"/>
+    <link rel="stylesheet" href="/css/auth-pages/auth-pages-style.css"/>
     <link rel="stylesheet" href="/css/common.css"/>
-
-    <!--    Page icon-->
     <link rel="icon" type="image/x-icon" href="/img/main-pages/keyboard_simple.png"/>
-
-    <!--    Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
 
 <div class="login-card">
 
-    <div class="title">Lon In</div>
+    <div class="title">Log In</div>
+
+    <span id="user-registration-failure-label"
+          th:if="${param.error}">
+        Invalid username or password
+    </span>
 
     <form th:action="@{/translate/login}" method="post">
 
@@ -44,11 +34,13 @@
                class="form-control"
                placeholder="Password">
 
-        <button class="btn-login" type="submit">
+        <button class="btn-auth" type="submit">
             Login
         </button>
 
     </form>
+
+    <a class="btn-redirect" th:href="@{/translate/register}">New here?</a>
 
 </div>
 

@@ -63,23 +63,23 @@ public class UserSeeder implements ApplicationListener<ContextRefreshedEvent> {
                 )
         );
 
-        userDTOList.forEach((x) -> {
+        userDTOList.forEach((userDTO) -> {
 
             Optional<User> optionalUser = Optional.ofNullable(
-                    userRepository.findByNickname(x.nickname())
+                    userRepository.findByNickname(userDTO.nickname())
             );
 
-            optionalUser.ifPresentOrElse((u) -> {
+            optionalUser.ifPresentOrElse((user) -> {
 
                         log.info("[{} user with password {} and role {}]",
-                                u.getNickname(), u.getPassword(), u.getRoleName());
+                                user.getNickname(), user.getPassword(), user.getRoleName());
 
                     }, () -> {
 
                         User user = new UserBuilder()
-                                .withNickname(x.nickname())
-                                .withPassword(passwordEncoder.encode(x.password()))
-                                .withRole(x.role())
+                                .withNickname(userDTO.nickname())
+                                .withPassword(passwordEncoder.encode(userDTO.password()))
+                                .withRole(userDTO.role())
                                 .build();
 
                         userRepository.save(user);

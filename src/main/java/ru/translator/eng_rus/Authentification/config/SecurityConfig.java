@@ -54,6 +54,8 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
+                                "/translate/register",
+                                "/translate/getCredentials",
                                 "/translate/login",
                                 "/css/**",
                                 "/img/**",
@@ -69,7 +71,9 @@ public class SecurityConfig {
                 )
 
                 .formLogin(login -> login
-                        .loginPage("/translate/login")
+                        .loginPage(
+                                "/translate/login"
+                        )
                         .defaultSuccessUrl("/translate/main")
                         .failureUrl("/translate/login")
                         .permitAll()

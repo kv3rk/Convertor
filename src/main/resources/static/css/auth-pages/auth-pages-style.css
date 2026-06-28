@@ -1,0 +1,158 @@
+/* =========================
+   Layout (centers the login card on the page)
+   ========================= */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   Login Card
+   ========================= */
+
+.login-card {
+    width: 420px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================
+   Title
+   ========================= */
+
+.title {
+    text-align: center;
+
+    font-size: 2rem;
+    font-weight: 600;
+
+    color: #1f2937;
+
+    margin-bottom: 30px;
+}
+
+/* =========================
+   Inputs
+   ========================= */
+
+.form-control {
+    margin-bottom: 6px;
+
+    border: 1px solid #d1d5db;
+
+    color: #1f2937;
+    background-color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: #9ca3af;
+}
+
+.form-control:focus {
+    border-color: #4f6d8a;
+    box-shadow: 0 0 0 0.2rem rgba(79, 109, 138, 0.15);
+}
+
+/* =========================
+   Field-level validation errors
+   ========================= */
+
+.field-error {
+    display: block;
+
+    color: #b91c1c;
+    font-size: 0.8rem;
+
+    margin-bottom: 12px;
+}
+
+/* =========================
+   Primary action button
+   ========================= */
+
+.btn-auth {
+    margin-top: 1.4vh;
+
+    width: 100%;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 11px;
+
+    background-color: #4f6d8a;
+    color: white;
+
+    font-weight: 500;
+    font-size: 0.95rem;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-auth:hover {
+    background-color: #405a73;
+}
+
+.btn-auth:active {
+    transform: scale(0.98);
+}
+
+/* =========================
+   Secondary navigation link
+   (login <-> register)
+   ========================= */
+
+.btn-redirect {
+    display: block;
+
+    margin-top: 1.2vh;
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 10px;
+    border-radius: 8px;
+
+    border: 1px solid #d1d5db;
+
+    color: #4f6d8a;
+    background-color: transparent;
+
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-redirect:hover {
+    background-color: #f5f7fa;
+    border-color: #4f6d8a;
+}
+
+/* =========================
+   Top-level error banner
+   (wrong login, duplicate registration, etc.)
+   ========================= */
+
+#user-registration-failure-label {
+    display: block;
+
+    margin-bottom: 16px;
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+
+    color: #991b1b;
+    font-size: 0.85rem;
+    text-align: center;
+}
