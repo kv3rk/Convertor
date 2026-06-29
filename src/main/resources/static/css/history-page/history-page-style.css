@@ -52,3 +52,22 @@ h3 {
 .backbtn {
     margin-top: 30px;
 }
+
+/* =========================
+   Actions column (Remove / Delete all)
+   Fixed width so layout never shifts,
+   no matter how many rows are added.
+   ========================= */
+
+.actions-col {
+    width: 140px;
+    white-space: nowrap;
+}
+
+.actions-col .btn {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+}

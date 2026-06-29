@@ -46,37 +46,33 @@
                id="full-history-table">
 
             <thead>
-
             <tr>
                 <th>Creation time</th>
                 <th>Wrong</th>
                 <th>Right</th>
-                <th>
+                <th class="actions-col">
                     <button id="delete-all-button"
                             onclick="delete_all_button(event)"
-                            class="btn btn-danger w-50">
+                            class="btn btn-danger">
                         Delete all
                     </button>
                 </th>
             </tr>
-
             </thead>
 
             <tbody id="full-history-table-body">
-
             <tr th:each="element : ${full_history}">
                 <td th:text="${element.time}"></td>
                 <td th:text="${element.wrongString}"></td>
                 <td th:text="${element.rightString}"></td>
-                <td>
+                <td class="actions-col">
                     <button th:id="${element.id}"
                             onclick="delete_target_button(event)"
-                            class="btn btn-danger w-30">
+                            class="btn btn-danger">
                         Remove
                     </button>
                 </td>
             </tr>
-
             </tbody>
 
         </table>
