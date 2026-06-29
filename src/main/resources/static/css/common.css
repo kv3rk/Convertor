@@ -53,3 +53,101 @@ body {
     border: 1px solid #e5e7eb;
     border-radius: 14px;
 }
+
+/* =========================
+   Account button (top-left corner)
+   ========================= */
+
+.account-trigger {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1040;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    color: #4f6d8a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+}
+
+.account-trigger:hover {
+    background-color: #f9fafb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.account-trigger svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================
+   Account offcanvas panel
+   ========================= */
+
+#accountPanel {
+    width: 33%;
+    min-width: 280px;
+}
+
+#accountPanel .offcanvas-header {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#accountPanel .offcanvas-title {
+    color: #4f6d8a;
+    font-weight: 600;
+}
+
+#accountPanel .account-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#accountPanel .account-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 4px;
+    color: #374151;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid #f1f5f9;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+#accountPanel .account-menu-item:hover {
+    background-color: #f9fafb;
+    color: #4f6d8a;
+}
+
+#accountPanel .account-menu-item.logout {
+    color: #c45858;
+    margin-top: 8px;
+}
+
+#accountPanel .account-menu-item.logout:hover {
+    background-color: #fef2f2;
+    color: #991b1b;
+}
+
+@media (max-width: 576px) {
+    #accountPanel {
+        width: 85%;
+    }
+}
