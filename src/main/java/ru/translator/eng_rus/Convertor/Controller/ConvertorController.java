@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.translator.eng_rus.Convertor.DTO.ConvertorDTO;
+import ru.translator.eng_rus.Convertor.DTO.ConvertorViewDTO;
 import ru.translator.eng_rus.Convertor.Service.ConvertorService;
 
 import java.util.List;
@@ -43,7 +44,7 @@ public class ConvertorController {
 
     @GetMapping("/get/full-history")
     @ResponseBody
-    public List<ConvertorDTO> getFullHistoryByUser() {
+    public List<ConvertorViewDTO> getFullHistoryByUser() {
 
         log.info("Entered [/translate/get/full-history] endpoint");
 

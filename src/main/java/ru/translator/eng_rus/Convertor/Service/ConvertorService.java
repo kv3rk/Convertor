@@ -8,11 +8,13 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import ru.translator.eng_rus.Convertor.DTO.ConvertorDTO;
+import ru.translator.eng_rus.Convertor.DTO.ConvertorViewDTO;
 import ru.translator.eng_rus.Convertor.Dictionary.TranslateWord;
 import ru.translator.eng_rus.Convertor.Entity.ConvertorEntity;
 import ru.translator.eng_rus.Convertor.Repository.ConvertorRepository;
 import ru.translator.eng_rus.common.mapper.ConvertorMapper;
 
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.UUID;
 
@@ -22,6 +24,8 @@ public class ConvertorService {
     private final TranslateWord translateWord;
     private final ConvertorRepository convertorRepository;
     private final ConvertorMapper convertorMapper;
+    private static final DateTimeFormatter FORMATTER =
+            DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
 
     public ConvertorService(TranslateWord translateWord,
                             ConvertorRepository convertorRepository,
@@ -57,13 +61,21 @@ public class ConvertorService {
     }
 
     @Transactional
-    public List<ConvertorDTO> getAllByUser() {
+    public List<ConvertorViewDTO> getAllByUser() {
 
         List<ConvertorDTO> convertorDTOList = convertorRepository.findAllByUsername(getSessionUsername());
 
         log.info("Got all converted strings and returning them in DTO list");
 
-        return convertorDTOList;
+        return convertorDTOList
+                .stream()
+                .map(dto -> new ConvertorViewDTO(
+                        dto.id(),
+                        dto.time().format(FORMATTER),
+                        dto.wrongString(),
+                        dto.rightString()
+                ))
+                .toList();
     }
 
     @Transactional
