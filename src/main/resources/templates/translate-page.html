@@ -21,6 +21,7 @@
     <script defer src="/js/translate-page/success_convertion_notification.js"></script>
     <script defer src="/js/translate-page/error_handling.js"></script>
     <script defer src="/js/translate-page/draw_recent_history_table.js"></script>
+    <script defer src="/js/translate-page/toggle-visibility-recent-history.js"></script>
 
     <!--    CSS files-->
     <link rel="stylesheet" href="/css/translate-page/translate-page-style.css"/>
@@ -122,7 +123,8 @@
 
 
     <!--    Recent translate history-->
-    <div class="mt-5" id="recent-history">
+    <div th:style="${recentList.isEmpty()} ? 'display: none;' : 'display: block;'"
+         class="mt-5" id="recent-history">
 
         <h5 class="mb-1 text-center">Recent changes</h5>
 

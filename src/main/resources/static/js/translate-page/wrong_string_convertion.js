@@ -28,6 +28,8 @@ async function convert(event) {
 
         await draw_recent_history_table();
 
+        await activateRecentHistoryModal();
+
     } catch (error) {
 
         console.error(error);
