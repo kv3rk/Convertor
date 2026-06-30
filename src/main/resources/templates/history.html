@@ -61,12 +61,6 @@
     <div class="offcanvas-body">
         <ul class="account-menu">
             <li>
-                <a th:href="@{/profile}" class="account-menu-item">Profile</a>
-            </li>
-            <li>
-                <a th:href="@{/settings}" class="account-menu-item">Settings</a>
-            </li>
-            <li>
                 <form th:action="@{/logout}" method="post">
                     <button type="submit" class="account-menu-item logout">Logout</button>
                 </form>
