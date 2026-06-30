@@ -14,7 +14,9 @@ public record ConvertorDTO(
         @NotBlank(message = "Text cannot be empty")
         String wrongString,
 
-        String rightString
+        String rightString,
+
+        String username
 
 ) {
 }

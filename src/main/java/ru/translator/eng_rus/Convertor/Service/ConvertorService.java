@@ -4,6 +4,8 @@ import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import ru.translator.eng_rus.Convertor.DTO.ConvertorDTO;
 import ru.translator.eng_rus.Convertor.Dictionary.TranslateWord;
@@ -39,6 +41,7 @@ public class ConvertorService {
 
         convertorEntity.setWrongString(convertorDTO.wrongString());
         convertorEntity.setRightString(rightString);
+        convertorEntity.setUsername(getSessionUsername());
 
         convertorRepository.save(convertorEntity);
 
@@ -54,12 +57,9 @@ public class ConvertorService {
     }
 
     @Transactional
-    public List<ConvertorDTO> getAll() {
+    public List<ConvertorDTO> getAllByUser() {
 
-        List<ConvertorDTO> convertorDTOList = convertorRepository.findAll()
-                .stream()
-                .map(convertorMapper::convertorEntityToDTO)
-                .toList();
+        List<ConvertorDTO> convertorDTOList = convertorRepository.findAllByUsername(getSessionUsername());
 
         log.info("Got all converted strings and returning them in DTO list");
 
@@ -70,7 +70,7 @@ public class ConvertorService {
     public List<ConvertorDTO> getRecentHistory() {
 
         Pageable pageable = PageRequest.of(0, 3);
-        List<ConvertorDTO> convertorDTOList = convertorRepository.recentHistoryOf3(pageable);
+        List<ConvertorDTO> convertorDTOList = convertorRepository.recentHistoryOf3(pageable, getSessionUsername());
 
         log.info("Got last 3 converted strings and returning them in DTO list");
 
@@ -78,9 +78,9 @@ public class ConvertorService {
     }
 
     @Transactional
-    public void removeAll() {
+    public void removeAllByUsername() {
 
-        convertorRepository.deleteAll();
+        convertorRepository.deleteAllByUsername(getSessionUsername());
 
         log.info("Removed all converted Strings");
 
@@ -94,5 +94,17 @@ public class ConvertorService {
         log.info("Removed string with id [{}]",
                 id);
 
+    }
+
+    public String getSessionUsername() {
+
+        SecurityContext securityContext = SecurityContextHolder.getContext();
+
+        String username = securityContext.getAuthentication().getName();
+
+        log.info("Retrieved username [{}] from SecurityContext",
+                username);
+
+        return username;
     }
 }

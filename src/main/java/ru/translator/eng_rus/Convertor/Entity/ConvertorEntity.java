@@ -25,4 +25,5 @@ public class ConvertorEntity {
     private String wrongString;
     private String rightString;
 
+    private String username;
 }

@@ -18,13 +18,19 @@ public interface ConvertorRepository extends JpaRepository<ConvertorEntity, UUID
                 c.id,
                 c.time,
                 c.wrongString,
-                c.rightString
+                c.rightString,
+                c.username
              )
              from ConvertorEntity c
+             where c.username = :user
              order by c.time desc
             """,
             nativeQuery = false
     )
-    List<ConvertorDTO> recentHistoryOf3(Pageable pageable);
+    List<ConvertorDTO> recentHistoryOf3(Pageable pageable, String user);
 
+
+    List<ConvertorDTO> findAllByUsername(String username);
+
+    void deleteAllByUsername(String username);
 }

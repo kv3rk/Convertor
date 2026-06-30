@@ -26,6 +26,7 @@ public class ConvertorController {
         log.info("Entered [/translate/main] endpoint");
 
         model.addAttribute("recentList", convertorService.getRecentHistory());
+        model.addAttribute("sessionUsername", convertorService.getSessionUsername());
 
         return "translate-page";
     }
@@ -42,11 +43,11 @@ public class ConvertorController {
 
     @GetMapping("/get/full-history")
     @ResponseBody
-    public List<ConvertorDTO> getFullHistory() {
+    public List<ConvertorDTO> getFullHistoryByUser() {
 
         log.info("Entered [/translate/get/full-history] endpoint");
 
-        return convertorService.getAll();
+        return convertorService.getAllByUser();
 
     }
 
@@ -64,7 +65,8 @@ public class ConvertorController {
 
         log.info("Entered [/translate/history] endpoint");
 
-        model.addAttribute("full_history", convertorService.getAll());
+        model.addAttribute("full_history", convertorService.getAllByUser());
+        model.addAttribute("sessionUsername", convertorService.getSessionUsername());
 
         return "history";
     }
@@ -74,7 +76,7 @@ public class ConvertorController {
     public void deleteAll() {
         log.info("Entered [/translate/delete] endpoint");
 
-        convertorService.removeAll();
+        convertorService.removeAllByUsername();
     }
 
     @DeleteMapping("/deleteNote")

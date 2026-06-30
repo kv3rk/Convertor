@@ -12,11 +12,13 @@ public interface ConvertorMapper {
     @Mapping(target = "time", source = "time")
     @Mapping(target = "wrongString", source = "wrongString")
     @Mapping(target = "rightString", source = "rightString")
+    @Mapping(target = "username", source = "username")
     ConvertorDTO convertorEntityToDTO(ConvertorEntity convertorEntity);
 
     @Mapping(target = "id", source = "id")
     @Mapping(target = "time", source = "time")
     @Mapping(target = "wrongString", source = "wrongString")
     @Mapping(target = "rightString", source = "rightString")
+    @Mapping(target = "username", source = "username")
     ConvertorEntity convertorDTOToEntity(ConvertorDTO convertorDTO);
 }
