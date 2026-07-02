@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:16
     container_name: convertor-db
-    restart: "no"
+    restart: always
     environment:
       POSTGRES_DB: translate
       POSTGRES_USER: ${DB_USER}
@@ -11,7 +11,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d translate"]
+      test: [ "CMD-SHELL", "pg_isready -U ${DB_USER} -d translate" ]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -21,7 +21,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: convertor-app
-    restart: "no"
+    restart: always
 
     ports:
       - "8080:8080"
@@ -37,7 +37,7 @@ services:
         condition: service_healthy
 
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/translate/main"]
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/translate/main" ]
       interval: 10s
       timeout: 5s
       retries: 10
